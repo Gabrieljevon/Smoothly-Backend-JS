@@ -104,5 +104,5 @@ This project is licensed under the MIT license - see the [LICENSE](LICENSE) file
 
 ## Authors
 
-- Github: [@ghufronakbar](https://www.github.com/ghufronakbar)
-- Instagram: [@ghufronakbar\_](https://www.instagram.com/ghufronakbar_)
+- Github: [@Gabrieljevon](https://www.github.com/Gabrieljevon)
+- Instagram: [@gabri3lje\_](https://www.instagram.com/gabri3lje)
