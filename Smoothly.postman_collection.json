@@ -1,0 +1,776 @@
+{
+	"info": {
+		"_postman_id": "9960407b-b5eb-4c8d-b171-60d7dd2b5f71",
+		"name": "Smoothly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25112448"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Account",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}{{api_admin}}/login"
+							},
+							"response": []
+						},
+						{
+							"name": "Profile",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": "{{base_url}}{{api_admin}}/profile"
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Profile",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "nama",
+											"value": "Jevon The Prodigy",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}{{api_admin}}/profile"
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Password",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "old_password",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "new_password",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "confirmation_password",
+											"value": "admin",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}{{api_admin}}/profile/password"
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Lokasi Toko",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "toko_latitude",
+											"value": "-7.7470917706577245",
+											"type": "text"
+										},
+										{
+											"key": "toko_longitude",
+											"value": "110.35531642792714",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}{{api_admin}}/location"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Layanan",
+					"item": [
+						{
+							"name": "Layanan",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": "{{base_url}}{{api_admin}}/layanan"
+							},
+							"response": []
+						},
+						{
+							"name": "Layanan Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": "{{base_url}}{{api_admin}}/layanan/10"
+							},
+							"response": []
+						},
+						{
+							"name": "Add Layanan",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "nama_layanan",
+											"value": "Test",
+											"type": "text"
+										},
+										{
+											"key": "deskripsi",
+											"value": "Test",
+											"type": "text"
+										},
+										{
+											"key": "harga",
+											"value": "10000",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}{{api_admin}}/layanan"
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Layanan",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "nama_layanan",
+											"value": "test2",
+											"type": "text"
+										},
+										{
+											"key": "deskripsi",
+											"value": "test2",
+											"type": "text"
+										},
+										{
+											"key": "harga",
+											"value": "11",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}{{api_admin}}/layanan/6"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Layanan",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": "{{base_url}}{{api_admin}}/layanan/6"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Riwayat",
+					"item": [
+						{
+							"name": "Riwayat",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{base_url}}{{api_admin}}/riwayat?status_pesanan",
+									"host": [
+										"{{base_url}}{{api_admin}}"
+									],
+									"path": [
+										"riwayat"
+									],
+									"query": [
+										{
+											"key": "status_pesanan",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Riwayat Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": "{{base_url}}{{api_admin}}/riwayat/2"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transaksi",
+					"item": [
+						{
+							"name": "Reject Transaksi",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": "{{base_url}}{{api_admin}}/transaksi/reject/10"
+							},
+							"response": []
+						},
+						{
+							"name": "Process Transaksi",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": "{{base_url}}{{api_admin}}/transaksi/process/10"
+							},
+							"response": []
+						},
+						{
+							"name": "Finish Transaksi",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": "{{base_url}}{{api_admin}}/transaksi/finish/10"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Pelanggan",
+					"item": [
+						{
+							"name": "Pelanggan",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}{{api_admin}}/pelanggan"
+							},
+							"response": []
+						},
+						{
+							"name": "Pelanggan Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}{{api_admin}}/pelanggan/1"
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9hZG1pbiI6MSwiaWF0IjoxNzE3NDg4MDM2LCJleHAiOjE3MTc0ODk0NzZ9.CNpfqV5L7H6rDKXCtKfw9WgCnu6lOqsbFACqEdH0H5c"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Pelanggan",
+			"item": [
+				{
+					"name": "Account",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "sasha@example.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "sasha",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}{{api_pelanggan}}/login"
+							},
+							"response": []
+						},
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "nama",
+											"value": "Lans The Prodigy",
+											"type": "text"
+										},
+										{
+											"key": "alamat",
+											"value": "Magelang",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "lanstheprodigy@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "no_telepon",
+											"value": "085156031385",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "confirmation_password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}{{api_pelanggan}}/register"
+							},
+							"response": []
+						},
+						{
+							"name": "Profile",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": "{{base_url}}{{api_pelanggan}}/profile"
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Profile",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nama",
+											"value": "Lans",
+											"type": "text"
+										},
+										{
+											"key": "alamat",
+											"value": "Yogyakarta",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "lanstheprodigy@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "no_telepon",
+											"value": "085156031385",
+											"type": "text"
+										},
+										{
+											"key": "foto_profile",
+											"type": "file",
+											"src": "/C:/Users/lanst/OneDrive/Pictures/jay.jpg"
+										}
+									]
+								},
+								"url": "{{base_url}}{{api_pelanggan}}/profile"
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Password",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "old_password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "new_password",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "confirmation_password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}{{api_pelanggan}}/profile/password"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Layanan",
+					"item": [
+						{
+							"name": "Layanan",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": "{{base_url}}{{api_pelanggan}}/layanan"
+							},
+							"response": []
+						},
+						{
+							"name": "Layanan Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": "{{base_url}}{{api_pelanggan}}/layanan/2"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Riwayat",
+					"item": [
+						{
+							"name": "Riwayat",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{base_url}}{{api_pelanggan}}/riwayat?status_pesanan",
+									"host": [
+										"{{base_url}}{{api_pelanggan}}"
+									],
+									"path": [
+										"riwayat"
+									],
+									"query": [
+										{
+											"key": "status_pesanan",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Riwayat Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": "{{base_url}}{{api_pelanggan}}/riwayat/1"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transaksi",
+					"item": [
+						{
+							"name": "Make Transaksi",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id_layanan",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "jumlah_sepatu",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "catatan_pelanggan",
+											"value": "Bersihkan Semuanya",
+											"type": "text"
+										},
+										{
+											"key": "latitude",
+											"value": "-7.744137158919086",
+											"type": "text"
+										},
+										{
+											"key": "longitude",
+											"value": "110.37752231008442",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}{{api_pelanggan}}/transaksi/make"
+							},
+							"response": []
+						},
+						{
+							"name": "Pay Transaksi",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "bukti_pembayaran",
+											"type": "file",
+											"src": "/C:/Projek/Smoothly/smoothly-be-express/images/bukti-pembayaran/bukti_transfer_7.jpg"
+										},
+										{
+											"key": "metode_pembayaran",
+											"value": "COD",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}{{api_pelanggan}}/transaksi/pay/13"
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF9wZWxhbmdnYW4iOjUsImlhdCI6MTcxNzQ4ODk0MiwiZXhwIjoxNzE3NDk0NzAyfQ.noloGk1eOyTic5iQ5E7NKvhGyq0AVK1VJNWBuZEhXWc"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:5000",
+			"type": "string"
+		},
+		{
+			"key": "api_admin",
+			"value": "/api/admin",
+			"type": "string"
+		},
+		{
+			"key": "api_pelanggan",
+			"value": "/api/pelanggan",
+			"type": "string"
+		}
+	]
+}
